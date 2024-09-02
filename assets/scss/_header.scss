@@ -1,0 +1,213 @@
+//
+//
+//
+//
+// ====================================================================================
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 0px 12px 0px #0000001F;
+    background: $colorWhite;
+}
+
+// ====================================================================================
+.main-header {
+}
+.main-header__body {
+    padding: 11px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-header__logo {
+}
+.main-header__menu {
+    display: flex;
+    align-items: center;
+}
+.main-header__menu-item {
+    margin: 0px 20px 0px 0px;
+    &:last-child {
+        margin: 0;
+    }
+}
+.main-header__menu-link {
+    font-family: $famileMontserrat;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color151515;
+    transition: 0.3s all;
+    &:hover {
+        color: $colorEA1C1C;
+    }
+}
+.main-header__phone {
+    display: flex;
+    align-self: center;
+    &:hover {
+        .main-header__phone-text {
+            color: $colorEA1C1C;
+        }
+    }
+}
+.main-header__phone-img {
+    margin: 0px 8px 0px 0px;
+    .white {
+        display: none
+    }
+}
+.main-header__phone-text {
+    font-family: $famileMontserrat;
+    font-size: 17px;
+    line-height: 20px;
+    font-weight: 500;
+    color: $color151515;
+    transition: 0.3s all;
+}
+.main-header__burger {
+    display: none;
+    cursor: pointer;
+}
+.main-header__burger-img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+        display: block;
+        width: 20px;
+        height: 3px;
+        background: $colorEA1C1C;
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $colorEA1C1C;
+        }
+        &::before {
+            top: -6px;
+        }
+        &::after {
+            bottom: -6px;
+        }
+    }
+}
+@media(max-width: 1180px) {
+    .main-header__body {
+        justify-content: normal;
+    }
+    .main-header__logo {
+        flex: auto;
+    }
+    .main-header__menu {
+        display: none;
+    }
+    .main-header__phone {
+        margin: 0px 15px 0px 0px;
+    }
+    .main-header__phone-img {
+        margin: 0px 0px 0px 0px;
+    }
+    .main-header__phone-text {
+        display: none;
+    }
+    .main-header__burger {
+        display: block;
+    }
+}
+@media(max-width: 770px) {
+    .main-header__logo {
+        .logo__img {
+            width: 40px;
+            height: 40px;
+            img {
+                width: 20px;
+            }
+        }
+        .logo__content {
+            width: 50px;
+        }
+        .logo__text img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// ====================================================================================
+.smartphone-header {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100%;
+    background: $colorWhite;
+    transition: 0.3s all;
+    &.active {
+        right: 0;
+    }
+    .container {
+        height: 100%;
+    }
+}
+.smartphone-header__body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.smartphone-header__exit {
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    width: 24px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.smartphone-header__exit-img {
+    width: 30px;
+    height: 4px;
+    background: $color151515;
+    transform: rotate(45deg);
+    span {
+        width: 100%;
+        height: 100%;
+        display: block;
+        background: $color151515;
+        transform: rotate(90deg);
+    }
+}
+.smartphone-header__menu {
+}
+.smartphone-header__menu-item {
+    margin: 0px 0px 30px;
+    &:last-child {
+        margin: 0;
+    }
+}
+.smartphone-header__menu-link {
+    text-align: center;
+    display: block;
+    font-family: $famileMontserrat;
+    font-size: 18px;
+    font-weight: 500;
+    color: $color151515;
+    transition: 0.3s all;
+    &:hover {
+        color: $colorEA1C1C;
+    }
+}

@@ -1,0 +1,28 @@
+.title {
+    margin: 0px 0px 80px;
+    font-family: $famileMontserrat;
+    font-size: 45px;
+    line-height: 57px;
+    font-weight: 600;
+    color: $color151515;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 60px;
+        left: 5px;
+        width: 40px;
+        height: 4px;
+        background: $colorEA1C1C;
+    }
+    @media(max-width: 550px) {
+        margin: 0px 0px 30px;
+        font-size: 25px;
+        line-height: 30px;
+        &::before {
+            top: 37px;
+            width: 30px;
+            height: 3px;
+        }
+    }
+}

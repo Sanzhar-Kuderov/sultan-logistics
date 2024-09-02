@@ -1,0 +1,28 @@
+//
+//
+//
+//
+// ====================================================================================
+.logo {
+}
+.logo__body {
+    display: flex;
+    align-items: center;
+}
+.logo__img {
+    margin: 0px 10px 0px 0px;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background: $colorEA1C1C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo__content {
+}
+.logo__text {
+    &:nth-child(1) {
+        margin: 0px 0px 5px;
+    }
+}
